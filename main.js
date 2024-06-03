@@ -17,8 +17,7 @@ let carrito = [];
 // Mostrar productos en la tienda
 
 function mostrarProductos() {
-  productosDiv.innerHTML = ''; // Limpiar el contenido antes de agregar los productos
-
+  
   productos.forEach( (producto) => {
 
     const productoDiv = document.createElement('div');
@@ -37,9 +36,10 @@ function mostrarProductos() {
 
 // Agregar producto al carrito
 function agregarAlCarrito(productId) {
-    const producto = productos.find(p => p.id === productId);
-    carrito.push(producto);
-    mostrarCarrito();
+  const producto = productos.find((p) => p.id === productId);
+  carrito.push(producto);
+  guardarCarritoEnLocalStorage();
+  mostrarCarrito();
 }
 
 // Mostrar productos en el carrito
@@ -84,8 +84,26 @@ function mostrarTotal() {
 
 }
 
+
+
+// Guardar carrito en localStorage
+function guardarCarritoEnLocalStorage() {
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+
+// Cargar carrito desde localStorage
+function cargarCarritoDeLocalStorage() {
+  const carritoGuardado = localStorage.getItem('carrito');
+  if (carritoGuardado) {
+      carrito = JSON.parse(carritoGuardado);
+      mostrarCarrito();
+  }
+}
+
 // Inicializar mostrando los productos
 mostrarProductos();
+
+cargarCarritoDeLocalStorage();
 
 
 
