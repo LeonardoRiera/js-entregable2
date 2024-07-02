@@ -1,24 +1,107 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
   display: flex;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-color: black;
+  background-color: rgb(37, 37, 37);
+  width: 100%; /* Ancho completo del viewport */
+  max-width: 2200px;/* Ancho máximo deseado */
+  margin: 0 auto;
 }
+
+/* navbar */
+
+.fotoNav {
+  width: 13vmax;
+}
+
+.navCarrito {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.navCantidad {
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  padding: 0.5px 7px;
+}
+
+.navMonto {
+  color: white;
+  margin-left: 1vmax;
+}
+
+/* header */
+header {
+  background-image: url(img/fondoHeader.png);
+  background-position: center center;
+  background-size: cover;
+  width: 100vw;
+  height: 50vmax;
+  padding-top: 10vmax;
+}
+
+.textoHeader {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.elementoHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.elementoHeader img {
+  width: 60vmax;
   
-.container {
+}
+
+.bloque1Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+.principalHeader {
+  font-family: "Francois One", sans-serif;
+  font-weight: bold;
+  font-size: 8vmax;
+  line-height: 0.9;
+}
+.webHeader {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-bottom: 2px;
+  padding-bottom: 0;
+}
+
+.bloque2Header {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px white;
+  
+}
+
+
+/* contenedor productos */  
+.container2 {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 60vmax;
+  width: 65vmax;
   justify-content: center;
-  margin: 6rem 6rem;
-  
+  margin: 6rem 3rem;
+      
 }
   
 h1, h2 {
@@ -26,17 +109,12 @@ h1, h2 {
   text-align: center;
 }
 
-
-/* divs a llenar */
-  
+/* divs a llenar */ 
 .productos {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  align-items: center;
-  
-  
-  
+  align-items: center; 
 }
 
 .carrito {
@@ -58,9 +136,8 @@ h1, h2 {
   
 }
 
-
 .fotoZapa {
-  width: 14rem;
+  width: 16vmax;
   margin-bottom: 1.5rem;
   border-radius: 10px;
 }
@@ -102,4 +179,44 @@ button:hover {
   flex-flow: row nowrap;
 }
 
+
+/* footer */
+
+footer {
+  background-color: black;
+}
+
+.contenedorFooter {
   
+  height: 25vmax;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divLogo {
+  display: flex;
+  justify-content: end;
+}
+
+.logoFooter {
+  width: 17vmax;
+ 
+}
+
+.derechos {
+  background-color: black;
+  font-size: 0.8vmax;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.derechos p {
+  color: white;
+  text-align: center;
+  margin-bottom: 2px;
+}
+  
+.redes {
+  color: white;
+}

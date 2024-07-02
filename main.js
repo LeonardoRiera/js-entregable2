@@ -20,10 +20,9 @@ async function cargarProductos() {
   }
 }
 
-
-
 let carrito = [];
 let productos = []; 
+let total = 0;
 
 // Mostrar productos en la tienda
 function mostrarProductos() {
@@ -45,17 +44,6 @@ function mostrarProductos() {
 }
 
 // Agregar producto al carrito
-/* function agregarAlCarrito(productId) {
-  
-  const producto = productos.find((p) => p.id === productId);
-  carrito.push(producto);
-  guardarCarritoEnLocalStorage();
-  mostrarCarrito();
-} */
-
-
-
-// Agregar producto al carrito
 function agregarAlCarrito(productId) {
   const producto = productos.find((p) => p.id === productId);
   const productoEnCarrito = carrito.find((p) => p.id === productId);
@@ -73,20 +61,13 @@ function agregarAlCarrito(productId) {
   mostrarCarrito();
 }  
 
-
-
-
-
 // Mostrar productos en el carrito
 function mostrarCarrito() {
 
   carritoDiv.innerHTML = ''; // esto es para limpiar el contenido antes de agregar los productos (importante);
 
   carrito.forEach((item, index) => {
-
     const itemDiv = document.createElement('div');
-
-
     itemDiv.classList.add('item-carrito');
 
     itemDiv.innerHTML = `<img src="img/${item.imagen}" alt="producto zapatilla" class="fotoZapa2">
@@ -98,9 +79,7 @@ function mostrarCarrito() {
 
     carritoDiv.appendChild(itemDiv);
 
-  });
-
- 
+  }); 
 
   mostrarTotal();
   mostrarBoton();
@@ -111,9 +90,9 @@ function mostrarCarrito() {
 function incrementarCantidad(productId) {
   const productoEnCarrito = carrito.find((p) => p.id === productId);
   if (productoEnCarrito) {
-      productoEnCarrito.cantidad++;
-      guardarCarritoEnLocalStorage();
-      mostrarCarrito();
+    productoEnCarrito.cantidad++;
+    guardarCarritoEnLocalStorage();
+    mostrarCarrito();
   }
 }
 
@@ -122,10 +101,10 @@ function decrementarCantidad(productId) {
   const productoEnCarrito = carrito.find((p) => p.id === productId);
   if (productoEnCarrito) {
       if (productoEnCarrito.cantidad > 1) {
-          productoEnCarrito.cantidad--;
+        productoEnCarrito.cantidad--;
       } else {
-          const index = carrito.indexOf(productoEnCarrito);
-          carrito.splice(index, 1);
+        const index = carrito.indexOf(productoEnCarrito);
+        carrito.splice(index, 1);
       }
       guardarCarritoEnLocalStorage();
       mostrarCarrito();
@@ -138,45 +117,93 @@ function mostrarBoton() {
 
   if (!document.getElementById('botonCompra') && carrito.length > 0) {
 
-  const botonCompra = document.createElement('button');
-  botonCompra.textContent = 'Comprar';
-  botonCompra.id = 'botonCompra';
-  botonCompra.className = 'botonCompra';
+    const botonCompra = document.createElement('button');
+    botonCompra.textContent = 'Comprar';
+    botonCompra.id = 'botonCompra';
+    botonCompra.className = 'botonCompra';
+   
+    botonCompra.addEventListener('click', () => { 
 
-  botonCompra.addEventListener('click', () => { 
-    alert('Su pedido esta siendo despachado');
+      const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
-    vaciarCarrito();
-    localStorage.removeItem('carrito');
-  });
+      let carritoHTML = '';
+       carrito.forEach(item => {
+        carritoHTML += `
+         <div class="item-compra">
+        <p>${item.nombre} - $${item.precio} x ${item.cantidad} = $${item.precio * item.cantidad}</p>
+        </div>
+        `;
+      });
+     
+      container.innerHTML = `<h2>Gran elección!</h2>
+      <p>el total de su compra es de $${total}</p>
+      ${carritoHTML}
+      <div class="form-container">
+        <h2>Formulario de Compra</h2>
+        <form id="purchase-form">
+          <div class="form-group">
+            <label for="firstName">Nombre:</label>
+            <input type="text" id="firstName" name="firstName" value="Juan">
+          </div>
+          <div class="form-group">
+            <label for="lastName">Apellido:</label>
+            <input type="text" id="lastName" name="lastName" value="Pérez">
+          </div>
+          <div class="form-group">
+            <label for="creditCardNumber">Número de Tarjeta de Crédito:</label>
+            <input type="text" id="creditCardNumber" name="creditCardNumber" value="1234 5678 9012 3456">
+          </div>
+          <button id=botonPagar type="button" class="btn-submit" onclick='confirmarPago()'>Pagar</button>
+        </form>
+      </div> `;
+      /* direccionar contenedor de facturacion al centro de la pantalla */ 
+      const facturacion = document.getElementById('container');
+      if(facturacion) {
+        facturacion.scrollIntoView({block: 'center'})
+      }
 
-  contenedor.appendChild(botonCompra);
+    });
+
+    contenedor.appendChild(botonCompra);       
 
   } else if (carrito.length === 0 && document.getElementById('botonCompra')) {
-    document.getElementById('botonCompra').remove();
-    
+  document.getElementById('botonCompra').remove(); 
   }
 }
 
-
+/* boton pagar */
+function confirmarPago() {
+  sweetAlert(); 
+  vaciarCarrito();
+  localStorage.removeItem('carrito');
   
+}
+
+function sweetAlert() {
+  Swal.fire({
+    position: "top-center",
+    icon: "success",
+    title: "Gracias por tu compra!",
+    showConfirmButton: false,
+    timer: 2000
+  });
+  setTimeout(() => {
+    window.location.href = window.location.href;
+  }, 2000);
+  
+}  
+ 
 // Eliminar producto del carrito
 function eliminarDelCarrito(index) {
-
   carrito.splice(index, 1);
-
   mostrarCarrito(); //actualiza carrito
   guardarCarritoEnLocalStorage() //actualiza storage
 
 }
 
-
-
 // Vaciar carrito de compras
 function vaciarCarrito() {
-
   carrito = [];
-
   mostrarCarrito();  //actualiza carrito
   localStorage.removeItem('carrito'); //actualiza storage
 }
@@ -184,14 +211,19 @@ function vaciarCarrito() {
 
 // Mostrar total de la compra
 function mostrarTotal() {
-  const total = carrito.reduce((sum, item) => sum + item.precio * item.cantidad, 0);
+  total = carrito.reduce((sum, item) => sum + item.precio * item.cantidad, 0);
   totalDiv.innerHTML = `Total: $${total}`;
+  let navTotal = document.getElementById('montoTotal'); 
+  navTotal.textContent = `Total: $${total}`;
+
+  let cantidadNav = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+  let contadorCantidad = document.getElementById('navCantidad');
+  contadorCantidad.textContent = `${cantidadNav}`;
+
   // Agregar clase CSS para extender el margen
   totalDiv.classList.add('total-margin');  
 
 }
-
-
 
 // Guardar carrito en localStorage
 function guardarCarritoEnLocalStorage() {
@@ -206,8 +238,6 @@ function cargarCarritoDeLocalStorage() {
       mostrarCarrito();
   }
 }
-
-
 
 // Inicializar cargar los productos
 cargarProductos()
