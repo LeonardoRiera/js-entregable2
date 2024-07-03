@@ -9,17 +9,22 @@ body {
   height: 100%;
   background-color: rgb(37, 37, 37);
   width: 100%; /* Ancho completo del viewport */
-  max-width: 2200px;/* Ancho máximo deseado */
+  max-width: 2500px;/* Ancho máximo deseado */
   margin: 0 auto;
 }
 
 /* navbar */
+.navStyle {
+  height: 4.8rem;
+}
 
 .fotoNav {
   width: 13vmax;
+  margin-left: 10px;
 }
 
 .navCarrito {
+  margin-right: 10px;
   display: flex;
   flex-flow: row wrap;
 }
@@ -32,25 +37,46 @@ body {
 }
 
 .navMonto {
+  font-family: "Roboto Mono", monospace;
+  margin: 0;
   color: white;
-  margin-left: 1vmax;
+  margin-left: 1.5vmax;
 }
 
 /* header */
 header {
+  margin-top: 4.8rem;
   background-image: url(img/fondoHeader.png);
   background-position: center center;
   background-size: cover;
   width: 100vw;
-  height: 50vmax;
-  padding-top: 10vmax;
+  height: 45vmax;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  
 }
+
+.contenedorPrincipal {
+  flex-wrap: nowrap;
+}
+
 
 .textoHeader {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   align-items: center;
   justify-content: center;
+ 
+  
+}
+
+.slogan {  
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+  font-size: 3vmax;
+  font-weight: bold;
 }
 
 .elementoHeader {
@@ -59,8 +85,7 @@ header {
   align-items: center;
 }
 .elementoHeader img {
-  width: 60vmax;
-  
+  width: 56vmax;
 }
 
 .bloque1Header {
@@ -68,18 +93,22 @@ header {
   justify-content: center;
   align-items: center;
   flex-flow: column wrap;
+  border: 1vmax solid #212529;
+  padding: 2.1vmax;
+  margin-bottom: 3vmax;
 }
 .principalHeader {
   font-family: "Francois One", sans-serif;
   font-weight: bold;
-  font-size: 8vmax;
-  line-height: 0.9;
+  font-size: 6vmax;
+  line-height: 1.1;
 }
 .webHeader {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Francois One", sans-serif;
   font-weight: bold;
   margin-bottom: 2px;
   padding-bottom: 0;
+  font-size: 1vmax;
 }
 
 .bloque2Header {
@@ -91,20 +120,21 @@ header {
   
 }
 
-
 /* contenedor productos */  
+
 .container2 {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 65vmax;
+  width: 70vmax;
   justify-content: center;
   margin: 6rem 3rem;
       
 }
   
 h1, h2 {
+  font-family: "Bebas Neue", sans-serif;
   margin-top: 0;
   text-align: center;
 }
@@ -115,13 +145,11 @@ h1, h2 {
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center; 
+  margin-top: 3vmax;
+  margin-bottom: 5vmax;
 }
 
-.carrito {
-  display: flex;
-  flex-direction: column;  
-  
-}
+
 
 .producto {
   display: flex;
@@ -133,51 +161,122 @@ h1, h2 {
   border-radius: 4px;
   margin-bottom: 30px;
   box-shadow: 3px 3px 9px 1px rgba(26, 26, 26, 0.46);
+  width:19vmax;
   
 }
-
+/* foto market */
 .fotoZapa {
   width: 16vmax;
   margin-bottom: 1.5rem;
   border-radius: 10px;
 }
-
+/* foto carrito */
 .fotoZapa2 {
   width: 3rem;
   border-radius: 10px;
 }
   
-.item-carrito {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
+
   
 button {
-  padding: 10px 15px;
+  padding: 10px 25px;
   margin-top: 6px;
-  background-color: #007bff;
+  margin-bottom: 6px;
+  background-color: #1f1f1f;
   color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.2vmax;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
   
 button:hover {
-  background-color: #0056b3;
+  background-color: #45104b;
+  
 }
+
+/* carrito */
+.carrito {
+  display: flex;
+  flex-direction: column; 
+  flex-wrap: wrap; 
+  
+  
+}
+
+.item-carrito {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.item-carrito p {
+  margin: 0;
+}
+
+.divProducto p {
+  font-family: "Archivo Narrow", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+} 
 
 .total-margin {
   margin-top: 20px; 
 }
 
+.divProducto {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .divCantidad {
   display: flex;
   flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.divCantidad p {
+  font-family: "Archivo Narrow", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.btnCantidad {
+  margin: 0 2vmax;
+  padding: 2px 22px;
+  background-color: #1f1f1f;
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2vmax;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.btnEliminar {
+  padding: 10px 25px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  background-color: #1f1f1f;
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.2vmax;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
 
 
 /* footer */
@@ -219,4 +318,397 @@ footer {
   
 .redes {
   color: white;
+}
+
+
+
+
+/* ++++++++++++++++++++++++ media query |  pantalla gigante |   ++++++++++++++++++++++++++++++++++*/
+
+@media screen and (max-width:2220px) {
+    
+    
+}
+
+
+/* ++++++++++++++++++++++++ media query | pantalla extra extra lg  |   ++++++++++++++++++++++++++++++++++*/
+
+
+
+@media screen and (max-width:1400px) {
+    
+    
+}
+
+
+
+/* ++++++++++++++++++++++++ media query | pantalla extra lg   |  ++++++++++++++++++++++++++++++++++*/
+
+
+@media screen and (max-width:1200px) {
+    
+  /* market */
+  .container2 {
+    padding: 20px;
+    width: 82vmax;
+    margin: 6rem 3rem;
+          
+  }
+
+  .producto {
+  padding: 10px;  
+    width:22vmax;
+    
+  }
+
+  .fotoZapa {
+    width: 18vmax;
+    
+  }
+
+  button {
+    padding: 10px 25px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-size: 1.8vmax;
+   
+  }
+  
+    
+}
+
+
+
+/* ++++++++++++++++++++++++ media query | pantalla lg  | ++++++++++++++++++++++++++++++++++*/
+
+
+@media screen and (max-width:992px) {
+    
+  /* navbar */
+  .fotoNav {
+    width: 15vmax;
+    
+  }
+
+  /* market */
+  .btnEliminar {
+    padding: 10px 25px;
+    font-size: 1.8vmax;
+    
+  }
+  
+    
+}
+
+
+
+
+/* ++++++++++++++++++++++++ media query |  pantalla md   | ++++++++++++++++++++++++++++++++++*/
+
+
+
+@media screen and (max-width:768px) {
+
+  /* navbar */
+  .fotoNav {
+    width: 18vmax;
+    
+  }
+  .navStyle {
+    height: 4.5rem;
+  }
+  .navMonto {
+    font-size: 2.2vmax;
+  } 
+
+
+  /* header */
+  header {
+    margin-top: 4.5rem;
+      
+  }
+
+  /* market */
+  .container2 {
+    padding: 12px;
+    width: 82vmax;  
+    margin: 5rem 2rem; 
+        
+  }
+
+  .producto {
+    
+    padding: 10px;
+    
+    width:32vmax;
+    
+  }
+
+  .fotoZapa {
+    width: 26vmax;
+    
+  }
+
+  button {
+    font-size: 2.2vmax;
+   
+  }
+
+  .carrito {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item-carrito {
+    width: 90%;
+    
+   
+  }
+
+  .divProducto {
+    justify-content: start;
+    margin: 0;
+    margin-bottom: 3vmax;
+    margin-top: 2vmax;
+  }
+  .divProducto img {
+    margin-right: 5vmax;
+  } 
+  .divProducto p {
+    margin-right: 5vmax;
+    
+  }  
+  .fotoZapa2 {
+    width: 9vmax;
+  }
+
+  .divCantidad {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin: 0;
+
+  }
+  .divCantidad p {
+    font-size: 2.5vmax;
+    
+  }
+
+  .btnCantidad {
+    margin: 0 2vmax;
+    padding: 4px 16px;
+    font-size: 2vmax;
+  }  
+
+  
+ 
+
+}
+
+
+/* ++++++++++++++++++++++++ media query |  personalizado  | ++++++++++++++++++++++++++++++++++*/
+
+@media screen and (max-width:630px) {
+
+  /* header */
+  .bloque1Header {
+    padding: 2vmax;
+    
+  }
+  .principalHeader {
+    font-size: 5vmax;
+    
+  }
+  .webHeader {
+    font-size: 0.8vmax;
+  }
+  .elementoHeader img {
+    margin-right: 3vmax;
+    
+  }
+
+  /* market */
+  .container2 {
+    padding: 12px;
+    width: 82vmax;  
+    margin: 5rem 2rem; 
+        
+  }
+
+  .producto {
+    
+    padding: 10px;
+    
+    width:32vmax;
+    
+  }
+
+  .fotoZapa {
+    width: 26vmax;
+    
+  }
+
+  button {
+    font-size: 2.6vmax;
+   
+  }
+
+
+}
+
+/* ++++++++++++++++++++++++ media query |  pantalla sm   | ++++++++++++++++++++++++++++++++++*/
+
+@media screen and (max-width:576px) {
+
+  body {
+    flex-wrap: nowrap;
+  }
+
+  /* header */
+ header {
+  width: 100%;
+  
+ }
+  .navMonto {
+    font-size: 2vmax;
+  } 
+
+  .contenedorPrincipal {
+    flex-direction: column;
+  }
+  .textoHeader {
+    padding: 0;
+  }
+  .bloque1Header {
+    padding: 1.4vmax;
+    
+    
+  }
+  .principalHeader {
+    font-size: 4.8vmax;
+    
+  }
+  .webHeader {
+    font-size: 1vmax;
+  }
+
+  .slogan {  
+    font-size: 2.2vmax;
+    
+  }
+  .elementoHeader img {
+    display: none;
+  }
+
+  /* market */
+  .container2 {
+    padding: 12px;
+    width: 79vmax;  
+    margin: 5rem 2rem; 
+        
+  }
+
+  .producto {
+    
+    padding: 10px;
+    
+    width:44vmax;
+    
+  }
+
+  .fotoZapa {
+    width: 32vmax;
+    margin-bottom: 1.5vmax;
+    
+  }
+
+  
+
+  .fotoZapa2 {
+    width: 2.5rem;
+  
+  }
+
+  .divCantidad {
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .carrito {
+    width:100%;
+  }
+
+  .item-carrito {
+    width: 100%;
+  }
+
+
+}
+
+/* ++++++++++++++++++++++++ media query  | personalizado |   ++++++++++++++++++++++++++++++++++*/
+
+@media screen and (max-width:500px) {
+   
+   /* market */
+   .container2 {
+    padding: 12px;
+    width: 85%;  
+    margin: 5rem 2rem; 
+        
+  }
+
+  .producto {  
+    width:80%;
+    
+  }
+
+  .fotoZapa {
+    width: 85%;
+    margin-bottom: 1.5vmax;
+    
+  }
+
+  .fotoZapa2 {
+    display: none;
+  }
+
+  .divCantidad p {
+    font-size: 2vmax;
+    
+  }
+
+  
+}
+
+/* ++++++++++++++++++++++++ media query  | personalizada |   ++++++++++++++++++++++++++++++++++*/
+
+@media screen and (max-width:400px) {
+
+ /* navbar */
+.navStyle {
+  height:5.2rem;
+  
+}
+   
+}
+
+   
+/* ++++++++++++++++++++++++ media query  | pantalla xxsm |   ++++++++++++++++++++++++++++++++++*/
+
+@media screen and (max-width:320px) {
+
+  .item-carrito {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    
+  }
+  .divCantidad p {
+    display: none;
+  }
+
+  .btnEliminar {
+    margin-right: 2vmax;
+  }
+   
 }

@@ -68,14 +68,15 @@ function mostrarCarrito() {
 
   carrito.forEach((item, index) => {
     const itemDiv = document.createElement('div');
+    itemDiv.classList.add('row');
     itemDiv.classList.add('item-carrito');
 
-    itemDiv.innerHTML = `<img src="img/${item.imagen}" alt="producto zapatilla" class="fotoZapa2">
-    <p>${item.nombre}</p><p>$${item.precio}</p> 
-    <div class='divCantidad'><button onclick="decrementarCantidad(${item.id})">-</button>
+    itemDiv.innerHTML = `<div class='col-12 col-md-4 divProducto'><img src="img/${item.imagen}" alt="producto zapatilla" class="fotoZapa2">
+    <p>${item.nombre}</p><p>$${item.precio}</p> </div>
+    <div class='col-12 col-md-8 divCantidad'><button class='btnCantidad' onclick="decrementarCantidad(${item.id})">-</button>
     <p>x ${item.cantidad} = $${item.precio * item.cantidad}</p>
-    <button onclick="incrementarCantidad(${item.id})">+</button></div>
-    <button onclick="eliminarDelCarrito(${index})">Eliminar</button> `; 
+    <button class='btnCantidad' onclick="incrementarCantidad(${item.id})">+</button>
+    <button class='btnEliminar' onclick="eliminarDelCarrito(${index})">Eliminar</button></div>`; 
 
     carritoDiv.appendChild(itemDiv);
 
