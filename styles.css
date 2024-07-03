@@ -690,6 +690,14 @@ footer {
   
 }
 
+.navCarrito p {
+  font-size: 1.7vmax;
+}
+.navCantidad {
+  font-size: 1.7vmax;
+  padding: 0.1px 6px;
+}
+
    
 }
 
