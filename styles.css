@@ -7,10 +7,11 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-color: rgb(24, 24, 24);
+  background-color: #F3F4F5;
   width: 100%; /* Ancho completo del viewport */
   max-width: 2500px;/* Ancho máximo deseado */
   margin: 0 auto;
+  
 }
 
 /* navbar */
@@ -109,6 +110,7 @@ header {
   margin-bottom: 2px;
   padding-bottom: 0;
   font-size: 1vmax;
+  color: #212529;
 }
 
 .bloque2Header {
@@ -120,24 +122,67 @@ header {
   
 }
 
+.ola {
+  margin-top: -18%;
+  width: 100%;
+  
+  
+}
+
+.divIcon {
+  margin-top: 1rem;
+}
+.logoIcon {
+  width: 42%;
+  margin-left: 30%;
+ 
+}
+
 /* contenedor productos */  
 
 .container2 {
-  background-color: #fff;
+  background-color: #F3F4F5;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 70vmax;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.43);
+  width: 72vmax;
   justify-content: center;
-  margin: 6rem 3rem;
+  margin: 3rem 3rem 6rem 3rem;
   
       
 }
   
-h1, h2 {
+h1 {
   font-family: "Bebas Neue", sans-serif;
   margin-top: 0;
+  padding-bottom: 20px;
   text-align: center;
+  color: #212529;
+  font-size: 4vmax;
+  
+  
+}
+
+.primerH2 {
+  font-family: "Bebas Neue", sans-serif;
+  margin-top: 0;
+  padding-bottom: 20px;
+  text-align: center;
+  color: #212529;
+  font-size: 4vmax;
+  border-bottom: 3px solid #212529b1;
+
+}
+h3 {
+  font-family: "Bebas Neue", sans-serif;
+  margin-top: 0;
+  margin-bottom: 2vmax;
+  padding-top: 20px;
+  text-align: center;
+  color: #212529;
+  font-size: 3.5vmax;
+  border-top: 3px solid #212529b6;
+  
 }
 
 /* divs a llenar */ 
@@ -147,7 +192,8 @@ h1, h2 {
   justify-content: space-around;
   align-items: center; 
   margin-top: 3vmax;
-  margin-bottom: 5vmax;
+  margin-bottom: 3vmax;
+  
 }
 
 
@@ -161,6 +207,7 @@ h1, h2 {
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-bottom: 30px;
+  background-color: #ffffffec;
   box-shadow: 3px 3px 9px 1px rgba(26, 26, 26, 0.46);
   width:19vmax;
   
@@ -207,6 +254,7 @@ button:hover {
 }
 
 .item-carrito {
+  background-color: #ffffffe9;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -214,6 +262,7 @@ button:hover {
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-bottom: 10px;
+ 
 }
 
 .item-carrito p {
@@ -232,8 +281,8 @@ button:hover {
   font-size: 2.8vmax;
   font-family: "Bebas Neue", sans-serif;
   text-align: center;
-  border: solid 1px rgb(40, 40, 40);
-  background-color: rgba(220, 20, 60, 0.122);
+  color: white;
+  background-color: #45104B;
   border-radius: 0.4vmax;
   width: 80%;
   margin-left: 10%;
@@ -298,7 +347,7 @@ button:hover {
   background-color: #1f1f1f;
   color: #fff;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 1.5vmax;
+  font-size: 2vmax;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -312,7 +361,7 @@ button:hover {
   padding: 10px 20px;
   margin-top: 6px;
   margin-bottom: 6px;
-  background-color: #7e006f;
+  background-color: #1f1f1f;
   color: #fff;
   font-family: "Bebas Neue", sans-serif;
   font-size: 1.2vmax;
@@ -322,20 +371,27 @@ button:hover {
   text-align: center;
 }
 
+.increment {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+.increment p {
+  margin-top: 2px;
+}
+
 
 
 
 
 /* footer */
 
-footer {
-  background-color: black;
-}
+
 
 .contenedorFooter {
   
   height: 25vmax;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -344,6 +400,7 @@ footer {
 .divLogo {
   display: flex;
   justify-content: end;
+  margin-right: 3%;
 }
 
 .logoFooter {
@@ -365,6 +422,18 @@ footer {
   
 .redes {
   color: white;
+  font-family: "Bebas Neue", sans-serif;
+  margin-left: 3%;
+
+}
+.redes a {
+  color: #45104B;
+  font-size: 2vmax;
+  margin-right: 2%;
+}
+.redes a:hover {
+  color: #bd19cf;
+  
 }
 
 
@@ -419,6 +488,10 @@ footer {
     margin-bottom: 6px;
     font-size: 1.8vmax;
    
+  }
+  .redes a {
+    font-size: 2.5vmax;
+    
   }
   
     
@@ -562,6 +635,16 @@ footer {
     width: 20%;
     margin-left: 74%;
     font-size: 1.5vmax;
+    
+  }
+
+  .botonCompra {
+    font-size: 2.5vmax;
+  
+  }
+
+  .redes a {
+    font-size: 3vmax;
     
   }
 
@@ -714,6 +797,11 @@ footer {
     
   }
 
+  .redes {
+    font-size: 1.2vmax;
+  
+  }
+
 
 }
 
@@ -757,10 +845,6 @@ footer {
     
   }
 
-  .fotoZapa2 {
-    display: none;
-  }
-
   .divCantidad p {
     font-size: 2vmax;
     
@@ -769,7 +853,7 @@ footer {
   .btnVaciar {
     width: 28%;
     margin-left: 72%;
-    font-size: 1.2vmax;
+    font-size: 1.8vmax;
     
   }
 
@@ -795,7 +879,7 @@ footer {
   }
   .navCantidad {
     font-size: 1.7vmax;
-    padding: 0.2px 8px;
+    padding: 2px 7px;
   }
 
   .btnVaciar {
@@ -803,6 +887,18 @@ footer {
     margin-left: 68%;
     font-size: 1.2vmax;
     
+  }
+
+  .divProducto p {
+    font-size: 2vmax;
+  }
+
+  .redes {
+    font-size: 1.5vmax;
+  
+  }
+  .redes h4{
+    font-size: 3vmax;
   }
 
    
@@ -841,6 +937,9 @@ footer {
     margin-left: 68%;
     font-size: 1.2vmax;
     
+  }
+  .redes h4{
+    font-size: 2.3vmax;
   }
    
 }

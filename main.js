@@ -73,9 +73,9 @@ function mostrarCarrito() {
 
     itemDiv.innerHTML = `<div class='col-12 col-md-4 divProducto'><img src="img/${item.imagen}" alt="producto zapatilla" class="fotoZapa2">
     <p>${item.nombre}</p><p>$${item.precio}</p> </div>
-    <div class='col-12 col-md-8 divCantidad'><button class='btnCantidad' onclick="decrementarCantidad(${item.id})">-</button>
+    <div class='col-12 col-md-8 divCantidad'><div class='increment'><button class='btnCantidad' onclick="decrementarCantidad(${item.id})">-</button>
     <p>x ${item.cantidad} = $${item.precio * item.cantidad}</p>
-    <button class='btnCantidad' onclick="incrementarCantidad(${item.id})">+</button>
+    <button class='btnCantidad' onclick="incrementarCantidad(${item.id})">+</button></div>
     <button class='btnEliminar' onclick="eliminarDelCarrito(${index})">Eliminar</button></div>`; 
 
     carritoDiv.appendChild(itemDiv);
@@ -143,15 +143,15 @@ function mostrarBoton() {
         <h2>Formulario de Compra</h2>
         <form id="purchase-form">
           <div class="form-group">
-            <label for="firstName">Nombre:</label>
+            <label for="firstName">Nombre:</label><br>
             <input type="text" id="firstName" name="firstName" value="Juan">
           </div>
           <div class="form-group">
-            <label for="lastName">Apellido:</label>
+            <label for="lastName">Apellido:</label><br>
             <input type="text" id="lastName" name="lastName" value="Pérez">
           </div>
           <div class="form-group">
-            <label for="creditCardNumber">Número de Tarjeta de Crédito:</label>
+            <label for="creditCardNumber">Número de Tarjeta de Crédito:</label><br>
             <input type="text" id="creditCardNumber" name="creditCardNumber" value="1234 5678 9012 3456">
           </div>
           <button id=botonPagar type="button" class="btn-submit" onclick='confirmarPago()'>Pagar</button>
