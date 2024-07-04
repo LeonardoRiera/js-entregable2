@@ -128,9 +128,9 @@ function mostrarBoton() {
       const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
       let carritoHTML = '';
-       carrito.forEach(item => {
+      carrito.forEach(item => {
         carritoHTML += `
-         <div class="item-compra">
+        <div class="item-compra">
         <p>${item.nombre} - $${item.precio} x ${item.cantidad} = $${item.precio * item.cantidad}</p>
         </div>
         `;

@@ -7,7 +7,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-color: rgb(37, 37, 37);
+  background-color: rgb(24, 24, 24);
   width: 100%; /* Ancho completo del viewport */
   max-width: 2500px;/* Ancho máximo deseado */
   margin: 0 auto;
@@ -130,6 +130,7 @@ header {
   width: 70vmax;
   justify-content: center;
   margin: 6rem 3rem;
+  
       
 }
   
@@ -226,8 +227,22 @@ button:hover {
 } 
 
 .total-margin {
-  margin-top: 20px; 
+  margin-top: 3vmax; 
+  margin-bottom: 2vmax;
+  font-size: 2.8vmax;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  border: solid 1px rgb(40, 40, 40);
+  background-color: rgba(220, 20, 60, 0.122);
+  border-radius: 0.4vmax;
+  width: 80%;
+  margin-left: 10%;
+ 
+  
+  
 }
+
+
 
 .divProducto {
   display: flex;
@@ -273,6 +288,38 @@ button:hover {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.botonCompra {
+  
+  padding: 15px 40px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  background-color: #1f1f1f;
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5vmax;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.btnVaciar {
+  width: 15%;
+  margin-left: 85%;
+  padding: 10px 20px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  background-color: #7e006f;
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.2vmax;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
 }
 
 
@@ -511,6 +558,13 @@ footer {
     font-size: 2vmax;
   }  
 
+  .btnVaciar {
+    width: 20%;
+    margin-left: 74%;
+    font-size: 1.5vmax;
+    
+  }
+
   
  
 
@@ -653,6 +707,13 @@ footer {
     width: 100%;
   }
 
+  .btnVaciar {
+    width: 20%;
+    margin-left: 80%;
+    font-size: 1.6vmax;
+    
+  }
+
 
 }
 
@@ -705,6 +766,14 @@ footer {
     
   }
 
+  .btnVaciar {
+    width: 28%;
+    margin-left: 72%;
+    font-size: 1.2vmax;
+    
+  }
+
+
   
 }
 
@@ -727,6 +796,13 @@ footer {
   .navCantidad {
     font-size: 1.7vmax;
     padding: 0.2px 8px;
+  }
+
+  .btnVaciar {
+    width: 32%;
+    margin-left: 68%;
+    font-size: 1.2vmax;
+    
   }
 
    
@@ -758,6 +834,13 @@ footer {
 
   .btnEliminar {
     margin-right: 2vmax;
+  }
+
+  .btnVaciar {
+    width: 32%;
+    margin-left: 68%;
+    font-size: 1.2vmax;
+    
   }
    
 }
