@@ -659,9 +659,26 @@ footer {
 /* ++++++++++++++++++++++++ media query  | personalizado |   ++++++++++++++++++++++++++++++++++*/
 
 @media screen and (max-width:500px) {
+
+  /* navbar */
+  .navStyle {
+    height:13vmax;
+  
+  }
+  header {
+    margin-top: 13vmax;
+  }
+
+  .navCarrito p {
+    font-size: 1.6vmax;
+  }
+  .navCantidad {
+    font-size: 1.6vmax;
+    padding: 0.1px 8px;
+  }
    
-   /* market */
-   .container2 {
+  /* market */
+  .container2 {
     padding: 12px;
     width: 85%;  
     margin: 5rem 2rem; 
@@ -695,19 +712,22 @@ footer {
 
 @media screen and (max-width:400px) {
 
- /* navbar */
-.navStyle {
-  height:12vmax;
-  
-}
+  /* navbar */
+  .navStyle {
+    height:12vmax;
+    
+  }
+  header {
+    margin-top: 12vmax;
+  }
 
-.navCarrito p {
-  font-size: 1.7vmax;
-}
-.navCantidad {
-  font-size: 1.7vmax;
-  padding: 0.1px 6px;
-}
+  .navCarrito p {
+    font-size: 1.7vmax;
+  }
+  .navCantidad {
+    font-size: 1.7vmax;
+    padding: 0.2px 8px;
+  }
 
    
 }
@@ -716,6 +736,15 @@ footer {
 /* ++++++++++++++++++++++++ media query  | pantalla xxsm |   ++++++++++++++++++++++++++++++++++*/
 
 @media screen and (max-width:320px) {
+
+  * navbar */
+  .navStyle {
+    height:11vmax;
+    
+  }
+  header {
+    margin-top: 11vmax;
+  }
 
   .item-carrito {
     padding: 0;
