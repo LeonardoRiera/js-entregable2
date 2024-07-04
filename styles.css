@@ -15,7 +15,7 @@ body {
 
 /* navbar */
 .navStyle {
-  height: 4.8rem;
+  height: 6vmax;
 }
 
 .fotoNav {
@@ -45,7 +45,7 @@ body {
 
 /* header */
 header {
-  margin-top: 4.8rem;
+  margin-top: 6vmax;
   background-image: url(img/fondoHeader.png);
   background-position: center center;
   background-size: cover;
@@ -385,6 +385,17 @@ footer {
 @media screen and (max-width:992px) {
     
   /* navbar */
+
+  .navStyle {
+    height: 8vmax;
+  }
+
+  header {
+    margin-top: 8vmax;
+    
+  }
+
+
   .fotoNav {
     width: 15vmax;
     
@@ -415,7 +426,7 @@ footer {
     
   }
   .navStyle {
-    height: 4.8rem;
+    height: 10vmax;
   }
   .navMonto {
     font-size: 2.2vmax;
@@ -424,7 +435,7 @@ footer {
 
   /* header */
   header {
-    margin-top: 4.5rem;
+    margin-top: 10vmax;
       
   }
 
@@ -686,7 +697,7 @@ footer {
 
  /* navbar */
 .navStyle {
-  height:6rem;
+  height:12vmax;
   
 }
 
