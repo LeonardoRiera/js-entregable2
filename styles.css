@@ -10,8 +10,7 @@ body {
   background-color: #F3F4F5;
   width: 100%; /* Ancho completo del viewport */
   max-width: 2500px;/* Ancho máximo deseado */
-  margin: 0 auto;
-  
+  margin: 0 auto;  
 }
 
 /* navbar */
@@ -55,8 +54,7 @@ header {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
-  
+  align-items: center;  
 }
 
 .contenedorPrincipal {
@@ -68,9 +66,7 @@ header {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  justify-content: center;
- 
-  
+  justify-content: center;  
 }
 
 .slogan {  
@@ -98,12 +94,14 @@ header {
   padding: 2.1vmax;
   margin-bottom: 3vmax;
 }
+
 .principalHeader {
   font-family: "Francois One", sans-serif;
   font-weight: bold;
   font-size: 6vmax;
   line-height: 1.1;
 }
+
 .webHeader {
   font-family: "Francois One", sans-serif;
   font-weight: bold;
@@ -118,24 +116,21 @@ header {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  border: solid 2px white;
-  
+  border: solid 2px white;  
 }
 
 .ola {
   margin-top: -18%;
-  width: 100%;
-  
-  
+  width: 100%;    
 }
 
 .divIcon {
   margin-top: 0.6rem;
 }
+
 .logoIcon {
   width: 42%;
-  margin-left: 30%;
- 
+  margin-left: 30%; 
 }
 
 /* contenedor productos */  
@@ -147,9 +142,7 @@ header {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.43);
   width: 72vmax;
   justify-content: center;
-  margin: 3rem 3rem 6rem 3rem;
-  
-      
+  margin: 3rem 3rem 6rem 3rem;      
 }
   
 h1 {
@@ -158,9 +151,7 @@ h1 {
   padding-bottom: 20px;
   text-align: center;
   color: #212529;
-  font-size: 4vmax;
-  
-  
+  font-size: 4vmax;    
 }
 
 .primerH2 {
@@ -171,8 +162,8 @@ h1 {
   color: #212529;
   font-size: 4vmax;
   border-bottom: 3px solid #212529b1;
-
 }
+
 h3 {
   font-family: "Bebas Neue", sans-serif;
   margin-top: 0;
@@ -181,8 +172,7 @@ h3 {
   text-align: center;
   color: #212529;
   font-size: 3.5vmax;
-  border-top: 3px solid #212529b6;
-  
+  border-top: 3px solid #212529b6;  
 }
 
 /* divs a llenar */ 
@@ -192,11 +182,8 @@ h3 {
   justify-content: space-around;
   align-items: center; 
   margin-top: 3vmax;
-  margin-bottom: 3vmax;
-  
+  margin-bottom: 3vmax;  
 }
-
-
 
 .producto {
   display: flex;
@@ -209,22 +196,21 @@ h3 {
   margin-bottom: 30px;
   background-color: #ffffffec;
   box-shadow: 3px 3px 9px 1px rgba(26, 26, 26, 0.46);
-  width:19vmax;
-  
+  width:19vmax;  
 }
+
 /* foto market */
 .fotoZapa {
   width: 16vmax;
   margin-bottom: 1.5rem;
   border-radius: 10px;
 }
+
 /* foto carrito */
 .fotoZapa2 {
   width: 3rem;
   border-radius: 10px;
-}
-  
-
+}  
   
 button {
   padding: 10px 25px;
@@ -240,17 +226,14 @@ button {
 }
   
 button:hover {
-  background-color: #45104b;
-  
+  background-color: #45104b;  
 }
 
 /* carrito */
 .carrito {
   display: flex;
   flex-direction: column; 
-  flex-wrap: wrap; 
-  
-  
+  flex-wrap: wrap;     
 }
 
 .item-carrito {
@@ -261,8 +244,7 @@ button:hover {
   padding: 5px 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin-bottom: 10px;
- 
+  margin-bottom: 10px; 
 }
 
 .item-carrito p {
@@ -285,10 +267,7 @@ button:hover {
   background-color: #45104B;
   border-radius: 0.4vmax;
   width: 80%;
-  margin-left: 10%;
- 
-  
-  
+  margin-left: 10%;     
 }
 
 
@@ -380,13 +359,7 @@ button:hover {
   margin-top: 2px;
 }
 
-
-
-
-
 /* footer */
-
-
 
 .contenedorFooter {
   
@@ -404,8 +377,7 @@ button:hover {
 }
 
 .logoFooter {
-  width: 17vmax;
- 
+  width: 17vmax; 
 }
 
 .derechos {
@@ -424,7 +396,6 @@ button:hover {
   color: white;
   font-family: "Bebas Neue", sans-serif;
   margin-left: 3%;
-
 }
 .redes a {
   color: #bd19cf;
@@ -432,8 +403,7 @@ button:hover {
   margin-right: 2%;
 }
 .redes a:hover {
-  color: #ff46e3;
-  
+  color: #ff46e3;  
 }
 
 /* seccion pago */
@@ -444,10 +414,9 @@ button:hover {
   flex-direction: column;
   align-items: center;
   margin-top: 58px;
-  margin-bottom: 58px;
- 
- 
+  margin-bottom: 58px;  
 }
+
 .saludoCompra {
   font-family: "Bebas Neue", sans-serif;
   font-size: 2.5vmax;
@@ -460,22 +429,20 @@ button:hover {
   background-color: aquamarine;
 }
 
-
-
 .formularioContainer {
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
-  
+  align-items: center;  
 }
+
 .form-group {
   text-align: center;
   margin-bottom: 15px;
   font-family: "Roboto Mono", monospace;
   display: flex;
-  flex-direction: column;
-  
+  flex-direction: column;  
 }
+
 .imputPago {
   margin-top: 4px;
 }
@@ -497,8 +464,7 @@ button:hover {
 }
 
 .fotoPago {
-  width: 30%;
-  
+  width: 30%;  
 }
 
 .marcaZapa {
@@ -538,47 +504,35 @@ button:hover {
   .container2 {
     padding: 20px;
     width: 82vmax;
-    margin: 6rem 3rem;
-          
+    margin: 6rem 3rem;        
   }
 
   .producto {
   padding: 10px;  
-    width:22vmax;
-    
+    width:22vmax;    
   }
 
   .fotoZapa {
-    width: 18vmax;
-    
+    width: 18vmax;  
   }
 
   button {
     padding: 10px 25px;
     margin-top: 6px;
     margin-bottom: 6px;
-    font-size: 1.8vmax;
-   
+    font-size: 1.8vmax;   
   }
+
   .redes a {
-    font-size: 2.5vmax;
-    
+    font-size: 2.5vmax;   
   }
 
   .marcaZapa {
     font-size: 1.8vmax;
-  }
-  
-
-
-  
-    
+  }    
 }
 
-
-
 /* ++++++++++++++++++++++++ media query | pantalla lg  | ++++++++++++++++++++++++++++++++++*/
-
 
 @media screen and (max-width:992px) {
     
@@ -589,50 +543,39 @@ button:hover {
   }
 
   header {
-    margin-top: 8vmax;
-    
+    margin-top: 8vmax;    
   }
 
-
   .fotoNav {
-    width: 15vmax;
-    
+    width: 15vmax;  
   }
 
   .logoIcon {
     width: 50%;
-    margin-left: 25%;
-   
+    margin-left: 25%;  
   }
 
   /* market */
   .btnEliminar {
     padding: 10px 25px;
-    font-size: 1.8vmax;
-    
+    font-size: 1.8vmax;   
   }
+
   .containerPago p {
     font-family: "Roboto Mono", monospace;
     font-size: 1.8vmax;
-  }
-  
-    
+  }     
 }
 
-
-
-
 /* ++++++++++++++++++++++++ media query |  pantalla md   | ++++++++++++++++++++++++++++++++++*/
-
-
 
 @media screen and (max-width:768px) {
 
   /* navbar */
   .fotoNav {
-    width: 18vmax;
-    
+    width: 18vmax;   
   }
+
   .navStyle {
     height: 10vmax;
   }
@@ -640,44 +583,34 @@ button:hover {
     font-size: 2.2vmax;
   } 
 
-
   /* header */
   header {
-    margin-top: 10vmax;
-      
+    margin-top: 10vmax;    
   }
+
   .logoIcon {
     width: 56%;
-    margin-left: 22%;
-   
+    margin-left: 22%; 
   }
   
-  
-
   /* market */
   .container2 {
     padding: 12px;
     width: 82vmax;  
-    margin: 5rem 2rem; 
-        
+    margin: 5rem 2rem;       
   }
 
-  .producto {
-    
-    padding: 10px;
-    
-    width:32vmax;
-    
+  .producto {  
+    padding: 10px;  
+    width:32vmax;  
   }
 
   .fotoZapa {
-    width: 26vmax;
-    
+    width: 26vmax;  
   }
 
   button {
-    font-size: 2.2vmax;
-   
+    font-size: 2.2vmax; 
   }
 
   .carrito {
@@ -686,9 +619,7 @@ button:hover {
   }
 
   .item-carrito {
-    width: 90%;
-    
-   
+    width: 90%;   
   }
 
   .divProducto {
@@ -697,13 +628,15 @@ button:hover {
     margin-bottom: 3vmax;
     margin-top: 2vmax;
   }
+
   .divProducto img {
     margin-right: 5vmax;
   } 
+
   .divProducto p {
-    margin-right: 5vmax;
-    
-  }  
+    margin-right: 5vmax;  
+  } 
+
   .fotoZapa2 {
     width: 9vmax;
   }
@@ -713,11 +646,10 @@ button:hover {
     justify-content: space-between;
     flex-wrap: nowrap;
     margin: 0;
-
   }
+
   .divCantidad p {
-    font-size: 2.5vmax;
-    
+    font-size: 2.5vmax;  
   }
 
   .btnCantidad {
@@ -729,29 +661,22 @@ button:hover {
   .btnVaciar {
     width: 20%;
     margin-left: 74%;
-    font-size: 1.5vmax;
-    
+    font-size: 1.5vmax;  
   }
 
   .botonCompra {
     font-size: 2.5vmax;
-  
   }
 
   .redes a {
-    font-size: 3vmax;
-    
+    font-size: 3vmax;  
   }
 
   .marcaZapa {
     font-size: 2.2vmax;
   }
 
-  
- 
-
 }
-
 
 /* ++++++++++++++++++++++++ media query |  personalizado  | ++++++++++++++++++++++++++++++++++*/
 
@@ -759,52 +684,44 @@ button:hover {
 
   /* header */
   .bloque1Header {
-    padding: 2vmax;
-    
+    padding: 2vmax;  
   }
+
   .principalHeader {
-    font-size: 5vmax;
-    
+    font-size: 5vmax;  
   }
+
   .webHeader {
     font-size: 0.8vmax;
   }
+
   .elementoHeader img {
-    margin-right: 3vmax;
-    
+    margin-right: 3vmax;  
   }
 
   /* market */
   .container2 {
     padding: 12px;
     width: 82vmax;  
-    margin: 5rem 2rem; 
-        
+    margin: 5rem 2rem;      
   }
 
-  .producto {
-    
-    padding: 10px;
-    
-    width:32vmax;
-    
+  .producto { 
+    padding: 10px;  
+    width:32vmax;  
   }
 
   .fotoZapa {
-    width: 26vmax;
-    
+    width: 26vmax;  
   }
 
   button {
-    font-size: 2.6vmax;
-   
+    font-size: 2.6vmax; 
   }
 
   .marcaZapa {
     font-size: 2.6vmax;
   }
-
-
 }
 
 /* ++++++++++++++++++++++++ media query |  pantalla sm   | ++++++++++++++++++++++++++++++++++*/
@@ -816,10 +733,10 @@ button:hover {
   }
 
   /* header */
- header {
-  width: 100%;
-  
- }
+  header {
+    width: 100%;
+  }
+
   .navMonto {
     font-size: 2vmax;
   } 
@@ -827,26 +744,28 @@ button:hover {
   .contenedorPrincipal {
     flex-direction: column;
   }
+
   .textoHeader {
     padding: 0;
   }
+
   .bloque1Header {
     padding: 1.4vmax;
-    
-    
+      
   }
+
   .principalHeader {
-    font-size: 4.8vmax;
-    
+    font-size: 4.8vmax;  
   }
+
   .webHeader {
     font-size: 1vmax;
   }
 
   .slogan {  
-    font-size: 2.2vmax;
-    
+    font-size: 2.2vmax;  
   }
+
   .elementoHeader img {
     display: none;
   }
@@ -855,29 +774,21 @@ button:hover {
   .container2 {
     padding: 12px;
     width: 79vmax;  
-    margin: 5rem 2rem; 
-        
+    margin: 5rem 2rem;       
   }
 
-  .producto {
-    
-    padding: 10px;
-    
-    width:44vmax;
-    
+  .producto {  
+    padding: 10px;  
+    width:44vmax;  
   }
 
   .fotoZapa {
     width: 32vmax;
-    margin-bottom: 1.5vmax;
-    
+    margin-bottom: 1.5vmax;  
   }
-
-  
 
   .fotoZapa2 {
     width: 2.5rem;
-  
   }
 
   .divCantidad {
@@ -896,22 +807,17 @@ button:hover {
   .btnVaciar {
     width: 20%;
     margin-left: 80%;
-    font-size: 1.6vmax;
-    
+    font-size: 1.6vmax;  
   }
 
   .redes {
     font-size: 1.2vmax;
-  
   }
 
   .logoIcon {
-  width: 60%;
-  margin-left: 20%;
- 
+    width: 60%;
+    margin-left: 20%;
   }
-
-
 }
 
 /* ++++++++++++++++++++++++ media query  | personalizado |   ++++++++++++++++++++++++++++++++++*/
@@ -921,8 +827,8 @@ button:hover {
   /* navbar */
   .navStyle {
     height:13vmax;
-  
   }
+
   header {
     margin-top: 13vmax;
   }
@@ -930,6 +836,7 @@ button:hover {
   .navCarrito p {
     font-size: 1.6vmax;
   }
+
   .navCantidad {
     font-size: 1.6vmax;
     padding: 0.1px 8px;
@@ -939,40 +846,31 @@ button:hover {
   .container2 {
     padding: 12px;
     width: 85%;  
-    margin: 5rem 2rem; 
-        
+    margin: 5rem 2rem;      
   }
 
   .producto {  
-    width:80%;
-    
+    width:80%;  
   }
 
   .fotoZapa {
     width: 85%;
-    margin-bottom: 1.5vmax;
-    
+    margin-bottom: 1.5vmax;  
   }
 
   .divCantidad p {
-    font-size: 2vmax;
-    
+    font-size: 2vmax;  
   }
 
   .btnVaciar {
     width: 28%;
     margin-left: 72%;
-    font-size: 1.8vmax;
-    
+    font-size: 1.8vmax;  
   }
 
   .logoFooter {
-    width: 17vmax;
-   
-  }
-
-
-  
+    width: 17vmax; 
+  }  
 }
 
 /* ++++++++++++++++++++++++ media query  | personalizada |   ++++++++++++++++++++++++++++++++++*/
@@ -981,9 +879,9 @@ button:hover {
 
   /* navbar */
   .navStyle {
-    height:12vmax;
-    
+    height:12vmax;  
   }
+
   header {
     margin-top: 12vmax;
   }
@@ -991,6 +889,7 @@ button:hover {
   .navCarrito p {
     font-size: 1.7vmax;
   }
+
   .navCantidad {
     font-size: 1.7vmax;
     padding: 2px 7px;
@@ -999,8 +898,7 @@ button:hover {
   .btnVaciar {
     width: 32%;
     margin-left: 68%;
-    font-size: 1.2vmax;
-    
+    font-size: 1.2vmax;  
   }
 
   .divProducto p {
@@ -1009,31 +907,26 @@ button:hover {
 
   .redes {
     font-size: 1.5vmax;
-  
   }
+
   .redes h4{
     font-size: 3vmax;
   }
 
   .logoIcon {
     width: 70%;
-    margin-left: 15%;
-   
-  }
-
-   
+    margin-left: 15%; 
+  }   
 }
-
-   
+  
 /* ++++++++++++++++++++++++ media query  | pantalla xxsm |   ++++++++++++++++++++++++++++++++++*/
 
 @media screen and (max-width:320px) {
 
-  * navbar */
   .navStyle {
-    height:11vmax;
-    
+    height:11vmax;  
   }
+
   header {
     margin-top: 11vmax;
   }
@@ -1041,9 +934,9 @@ button:hover {
   .item-carrito {
     padding: 0;
     margin: 0;
-    width: 100%;
-    
+    width: 100%;  
   }
+
   .divCantidad p {
     display: none;
   }
@@ -1055,11 +948,10 @@ button:hover {
   .btnVaciar {
     width: 32%;
     margin-left: 68%;
-    font-size: 1.2vmax;
-    
+    font-size: 1.2vmax; 
   }
+
   .redes h4{
     font-size: 2.3vmax;
-  }
-   
+  }   
 }
