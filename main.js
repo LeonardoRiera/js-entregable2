@@ -35,7 +35,7 @@ function mostrarProductos() {
 
     productoDiv.innerHTML = 
     `<img src="img/${producto.imagen}" alt="producto zapatilla" class="fotoZapa">
-    <p>${producto.nombre} - $${producto.precio}</p>
+    <p class='marcaZapa'>${producto.nombre} - u$d:${producto.precio}</p>
     <button onclick="agregarAlCarrito(${producto.id})">Agregar</button>`;
 
     productosDiv.appendChild(productoDiv);
@@ -72,9 +72,9 @@ function mostrarCarrito() {
     itemDiv.classList.add('item-carrito');
 
     itemDiv.innerHTML = `<div class='col-12 col-md-4 divProducto'><img src="img/${item.imagen}" alt="producto zapatilla" class="fotoZapa2">
-    <p>${item.nombre}</p><p>$${item.precio}</p> </div>
+    <p>${item.nombre}</p><p>u$d:${item.precio}</p> </div>
     <div class='col-12 col-md-8 divCantidad'><div class='increment'><button class='btnCantidad' onclick="decrementarCantidad(${item.id})">-</button>
-    <p>x ${item.cantidad} = $${item.precio * item.cantidad}</p>
+    <p>x ${item.cantidad} = u$d:${item.precio * item.cantidad}</p>
     <button class='btnCantidad' onclick="incrementarCantidad(${item.id})">+</button></div>
     <button class='btnEliminar' onclick="eliminarDelCarrito(${index})">Eliminar</button></div>`; 
 
@@ -131,14 +131,14 @@ function mostrarBoton() {
       carrito.forEach(item => {
         carritoHTML += `
         <div class="item-compra">
-        <p>${item.nombre} - $${item.precio} x ${item.cantidad} = $${item.precio * item.cantidad}</p>
+        <p>${item.nombre} - u$s:${item.precio} x ${item.cantidad} = u$d${item.precio * item.cantidad}</p>
         </div>
         `;
       });
      
       container.innerHTML = `<div class='containerPago'>
       <h2 class='saludoCompra'>Gran elección!</h2>
-      <p>El total de su compra es de $${total}</p>
+      <p>El total de su compra es de u$d:${total}</p>
       <div class='compra'>${carritoHTML}</div>
       <div class="formularioContainer">
         <h2 class='saludoCompra'>Ingrese aquí los datos de su tarjeta</h2>
@@ -215,9 +215,9 @@ function vaciarCarrito() {
 // Mostrar total de la compra
 function mostrarTotal() {
   total = carrito.reduce((sum, item) => sum + item.precio * item.cantidad, 0);
-  totalDiv.innerHTML = `Total: $${total}`;
+  totalDiv.innerHTML = `Total: u$d:${total}`;
   let navTotal = document.getElementById('montoTotal'); 
-  navTotal.textContent = `Total: $${total}`;
+  navTotal.textContent = `Total: u$d:${total}`;
 
   let cantidadNav = carrito.reduce((sum, item) => sum + item.cantidad, 0);
   let contadorCantidad = document.getElementById('navCantidad');

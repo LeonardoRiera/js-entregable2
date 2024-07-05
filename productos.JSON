@@ -1,8 +1,8 @@
 [
-    { "id": 1, "nombre": "Producto 1", "precio": 10, "cantidad":0, "imagen": "zapa1.jpg"},
-    { "id": 2, "nombre": "Producto 2", "precio": 20, "cantidad":0, "imagen": "zapa6.jpg"},
-    { "id": 3, "nombre": "Producto 3", "precio": 30, "cantidad":0, "imagen": "zapa3.jpg"},
-    { "id": 4, "nombre": "Producto 4", "precio": 60, "cantidad":0, "imagen": "zapa4.jpg"},
-    { "id": 5, "nombre": "Producto 5", "precio": 50, "cantidad":0, "imagen": "zapa2.jpg"},
-    { "id": 6, "nombre": "Producto 6", "precio": 70, "cantidad":0, "imagen": "zapa5.jpg"}
+    { "id": 1, "nombre": "Nike StromX", "precio": 40, "cantidad":0, "imagen": "zapa1.jpg"},
+    { "id": 2, "nombre": "Flecha High", "precio": 45, "cantidad":0, "imagen": "zapa6.jpg"},
+    { "id": 3, "nombre": "Nike Run", "precio": 55, "cantidad":0, "imagen": "zapa3.jpg"},
+    { "id": 4, "nombre": "Nike Lord", "precio": 80, "cantidad":0, "imagen": "zapa4.jpg"},
+    { "id": 5, "nombre": "tracker V", "precio": 70, "cantidad":0, "imagen": "zapa2.jpg"},
+    { "id": 6, "nombre": "All Stars", "precio": 60, "cantidad":0, "imagen": "zapa5.jpg"}
 ]
