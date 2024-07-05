@@ -136,27 +136,29 @@ function mostrarBoton() {
         `;
       });
      
-      container.innerHTML = `<h2>Gran elección!</h2>
-      <p>el total de su compra es de $${total}</p>
-      ${carritoHTML}
-      <div class="form-container">
-        <h2>Formulario de Compra</h2>
+      container.innerHTML = `<div class='containerPago'>
+      <h2 class='saludoCompra'>Gran elección!</h2>
+      <p>El total de su compra es de $${total}</p>
+      <div class='compra'>${carritoHTML}</div>
+      <div class="formularioContainer">
+        <h2 class='saludoCompra'>Ingrese aquí los datos de su tarjeta</h2>
+        <img class='fotoPago' src='img/tarjetas.png'>
         <form id="purchase-form">
           <div class="form-group">
-            <label for="firstName">Nombre:</label><br>
-            <input type="text" id="firstName" name="firstName" value="Juan">
+            <label for="firstName">Nombre:</label>
+            <input type="text" id="firstName" name="firstName" value="Coder" class="imputPago">
           </div>
           <div class="form-group">
-            <label for="lastName">Apellido:</label><br>
-            <input type="text" id="lastName" name="lastName" value="Pérez">
+            <label for="lastName">Apellido:</label>
+            <input type="text" id="lastName" name="lastName" value="House" class="imputPago">
           </div>
           <div class="form-group">
-            <label for="creditCardNumber">Número de Tarjeta de Crédito:</label><br>
-            <input type="text" id="creditCardNumber" name="creditCardNumber" value="1234 5678 9012 3456">
+            <label for="creditCardNumber">Número de Tarjeta de Crédito:</label>
+            <input type="text" id="creditCardNumber" name="creditCardNumber" value="1234 5678 9012 3456" class="imputPago">
           </div>
           <button id=botonPagar type="button" class="btn-submit" onclick='confirmarPago()'>Pagar</button>
         </form>
-      </div> `;
+      </div></div> `;
       /* direccionar contenedor de facturacion al centro de la pantalla */ 
       const facturacion = document.getElementById('container');
       if(facturacion) {

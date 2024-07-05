@@ -427,12 +427,75 @@ button:hover {
 
 }
 .redes a {
-  color: #45104B;
+  color: #bd19cf;
   font-size: 2vmax;
   margin-right: 2%;
 }
 .redes a:hover {
-  color: #bd19cf;
+  color: #ff46e3;
+  
+}
+
+/* seccion pago */
+
+.containerPago {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+ 
+ 
+}
+.saludoCompra {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5vmax;
+}
+
+.containerPago p {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.2vmax;
+  padding: 2px 4px;
+  background-color: aquamarine;
+}
+
+
+
+.formularioContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  
+}
+.form-group {
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: "Roboto Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  
+}
+.imputPago {
+  margin-top: 4px;
+}
+
+.btn-submit {
+  width: 50%;
+  margin-left: 25%;
+  padding: 10px 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: #1f1f1f;
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.8vmax;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.fotoPago {
+  width: 40%;
   
 }
 
@@ -526,6 +589,10 @@ button:hover {
     padding: 10px 25px;
     font-size: 1.8vmax;
     
+  }
+  .containerPago p {
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.8vmax;
   }
   
     
@@ -802,6 +869,12 @@ button:hover {
   
   }
 
+  .logoIcon {
+  width: 50%;
+  margin-left: 25%;
+ 
+  }
+
 
 }
 
@@ -857,6 +930,11 @@ button:hover {
     
   }
 
+  .logoFooter {
+    width: 17vmax;
+   
+  }
+
 
   
 }
@@ -899,6 +977,12 @@ button:hover {
   }
   .redes h4{
     font-size: 3vmax;
+  }
+
+  .logoIcon {
+    width: 60%;
+    margin-left: 20%;
+   
   }
 
    
